@@ -31,7 +31,7 @@ namespace Chess
         public static PosicaoXadrez LerPosicaoXadrez()
         {
             string s = Console.ReadLine();
-d            char linha = s[0];
+            char linha = s[0];
             int coluna = int.Parse(s[1] + "");
             return new PosicaoXadrez(linha, coluna);
         }
