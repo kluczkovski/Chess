@@ -6,6 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Tabuleiro\" />
+    <Folder Include="tabuleiro\" />
   </ItemGroup>
 </Project>
