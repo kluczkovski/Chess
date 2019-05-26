@@ -1,5 +1,6 @@
 ﻿using System;
 using tabuleiro;
+using Xadrez;
 
 namespace Chess
 {
@@ -27,6 +28,13 @@ namespace Chess
             Console.WriteLine("  a b c d e f g h");
         }
 
+        public static PosicaoXadrez LerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+d            char linha = s[0];
+            int coluna = int.Parse(s[1] + "");
+            return new PosicaoXadrez(linha, coluna);
+        }
 
         public static void ImprimirPeca(Peca peca)
         {

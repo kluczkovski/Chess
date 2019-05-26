@@ -31,7 +31,7 @@ namespace tabuleiro
             return peca(posicao) != null;
         }
 
-        public void ColocarPecas(Peca peca, Posicao posicao)
+        public void ColocarPeca(Peca peca, Posicao posicao)
         {
             if (ExistePeca(posicao))
             {
@@ -39,6 +39,19 @@ namespace tabuleiro
             }
             Pecas[posicao.Linha, posicao.Coluna] = peca;
             peca.Posicao = posicao;
+        }
+
+        public Peca retirarPeca(Posicao posicao)
+        {
+            if (peca(posicao) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(posicao);
+            Pecas[posicao.Linha, posicao.Coluna] = null;
+            aux.Posicao = null;
+
+            return aux;
         }
 
         public bool PosicaoValida(Posicao posicao)
